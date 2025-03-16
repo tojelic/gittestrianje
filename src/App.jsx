@@ -7,32 +7,41 @@ function App() {
   const [count, setCount] = useState(0);
 
   // Hardcoded current time (Example: "2025-03-16 14:30:00")
-  const hardcodedTime = '2025-03-16 11:15:00';
+  const hardcodedTime = '2025-03-16 12:44:00';
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
+    <div className="app-container">
+      <div className="logos">
+        <a href="https://vite.dev" target="_blank" rel="noopener noreferrer">
+          <img src={viteLogo} className="logo vite-logo" alt="Vite logo" />
         </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+        <a href="https://react.dev" target="_blank" rel="noopener noreferrer">
+          <img src={reactLogo} className="logo react-logo" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+
+      <h1 className="title">Welcome to Vite + React</h1>
+
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        <button className="count-button" onClick={() => setCount(count + 1)}>
+          Count is {count}
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+        <p className="description">
+          Edit <code>src/App.jsx</code> and save to see the changes!
         </p>
       </div>
-      <p className="hardcoded-time">Hardcoded Time: {hardcodedTime}</p>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+
+      <p className="hardcoded-time">
+        Current Hardcoded Time: <span>{hardcodedTime}</span>
       </p>
-    </>
+
+      <p className="read-the-docs">
+        Explore more by clicking on the Vite and React logos above
+      </p>
+      <p className="read-the-docs">
+        <strong>ovo je dev grana</strong>
+      </p>
+    </div>
   );
 }
 
